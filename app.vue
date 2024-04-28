@@ -4,5 +4,6 @@
   <div>
     <DesktopWallpaper />
 
+    <Toolbar />
   </div>
 </template>
