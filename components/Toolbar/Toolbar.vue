@@ -45,7 +45,7 @@
         </ToolbarAppBar>
       </div>
 
-      <div class="flex items-start">
+      <ToolbarTaskBar>
         <ToolbarButtonTaskBar class="mr-2 px-3">
           <div class="flex items-center gap-1">
             <div class="text-3xl">
@@ -86,7 +86,7 @@
         <ToolbarButtonTaskBar class="ml-2 w-[5px] border-l border-white/30">
           <span>&nbsp;</span>
         </ToolbarButtonTaskBar>
-      </div>
+      </ToolbarTaskBar>
     </div>
   </div>
 </template>
