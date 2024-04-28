@@ -30,8 +30,8 @@
         twMerge([
           'flex h-full cursor-default items-center justify-center text-white group-hover:bg-white/10',
           props.variant === 'system'
-            ? 'active:bg-white/15'
-            : 'active:bg-white/5',
+            ? 'group-active:bg-white/15'
+            : 'group-active:bg-white/5',
         ])
       "
       :style="{
