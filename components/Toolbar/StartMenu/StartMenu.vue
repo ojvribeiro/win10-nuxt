@@ -1,27 +1,21 @@
 <script setup lang="ts">
-  import { onClickOutside } from '@vueuse/core'
-
   const toolbar = useToolbar()
-
-  const target = ref(null)
-
-  onClickOutside(target, () => {
-    if (toolbar.startMenu.isOpen) {
-      toolbar.startMenu.isOpen = false
-    }
-  })
 </script>
 
 <template>
   <div
-    ref="target"
-    class="fixed bottom-11 left-0 h-[500px] w-[500px] overflow-hidden"
+    class="fixed bottom-11 left-0 h-[calc(100vh_-_44px)] w-screen overflow-hidden"
     :class="[!toolbar.startMenu.isOpen ? 'pointer-events-none' : '']"
   >
+    <div
+      class="absolute left-0 top-0 h-full w-full"
+      @mousedown="toolbar.startMenu.isOpen = false"
+    />
+
     <Transition name="start-menu">
       <div
         v-if="toolbar.startMenu.isOpen"
-        class="absolute left-0 top-0 h-full w-full bg-zinc-900/90 text-white backdrop-blur-md"
+        class="absolute bottom-0 left-0 h-[80%] w-[500px] bg-zinc-900/90 text-white backdrop-blur-md"
       >
         menu iniciar
       </div>
