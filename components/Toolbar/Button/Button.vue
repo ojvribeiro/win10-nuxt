@@ -19,7 +19,12 @@
 </script>
 
 <template>
-  <div :class="twMerge(['group block h-full w-12', props.wrapperClasses])">
+  <div
+    :class="twMerge(['group block h-full', props.wrapperClasses])"
+    :style="{
+      width: `calc(48px + ${props.clickableGap}px)`,
+    }"
+  >
     <button
       :class="
         twMerge([
