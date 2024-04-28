@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   ssr: false,
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/eslint',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+  ],
 
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',

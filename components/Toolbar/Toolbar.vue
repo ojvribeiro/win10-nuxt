@@ -2,6 +2,8 @@
   import { useDateFormat, useNow } from '@vueuse/core'
   import type { IconSet } from '~/components/Icon/types'
 
+  const toolbar = useToolbar()
+
   const formattedTime = useDateFormat(useNow(), 'HH:mm')
   const formattedDate = useDateFormat(useNow(), 'DD/MM/YYYY')
 
@@ -24,12 +26,14 @@
 
 <template>
   <div
-    class="fixed bottom-0 left-0 h-11 w-screen bg-zinc-900/90 font-light backdrop-blur-md"
+    class="fixed bottom-0 left-0 h-11 w-screen bg-zinc-900/95 font-light backdrop-blur-md"
   >
     <div class="flex h-full justify-between">
       <div class="flex h-full items-start gap-[3px]">
         <ToolbarAppBar>
-          <ToolbarButtonStartMenu />
+          <ToolbarButtonStartMenu
+            @click="toolbar.startMenu.isOpen = !toolbar.startMenu.isOpen"
+          />
 
           <ToolbarButtonTaskView />
         </ToolbarAppBar>
