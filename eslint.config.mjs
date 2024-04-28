@@ -12,6 +12,7 @@ export default withNuxt(
       'style/brace-style': 'off',
       'curly': 'off',
       'vue/operator-linebreak': 'off',
+      'style/arrow-parens': 'off',
     },
   }),
   // ...your other rules
