@@ -8,5 +8,11 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/tailwind.css',
   },
 
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
+
   devtools: { enabled: true },
 })

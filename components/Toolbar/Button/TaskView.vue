@@ -1,22 +1,3 @@
-<template>
-  <ToolbarButton
-    variant="system"
-    @mouseover="changeTaskViewState('hover')"
-    @mouseout="changeTaskViewState('idle')"
-  >
-    <Icon
-      v-for="state in taskViewStates"
-      :key="state"
-      :name="`task-view/${state}`"
-      :class="[
-        'text-md [shape-rendering:crispEdges]',
-        taskViewState === state ? 'opacity-100' : 'opacity-0',
-        `item-${state}`,
-      ]"
-    />
-  </ToolbarButton>
-</template>
-
 <script setup lang="ts">
   type States = 'idle' | 'hover'
 
@@ -27,6 +8,25 @@
     taskViewState.value = state
   }
 </script>
+
+<template>
+  <ToolbarButton
+    variant="system"
+    @mouseover="changeTaskViewState('hover')"
+    @mouseout="changeTaskViewState('idle')"
+  >
+    <Icon
+      v-for="state in taskViewStates"
+      :key="state"
+      :name="`task-view/${state}`"
+      class="text-md [shape-rendering:crispEdges]"
+      :class="[
+        taskViewState === state ? 'opacity-100' : 'opacity-0',
+        `item-${state}`,
+      ]"
+    />
+  </ToolbarButton>
+</template>
 
 <style scoped lang="scss">
   .item {

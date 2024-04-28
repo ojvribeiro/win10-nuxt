@@ -1,6 +1,6 @@
 <script setup lang="ts">
+  import { useDateFormat, useNow } from '@vueuse/core'
   import type { IconSet } from '~/components/Icon/types'
-  import { useNow, useDateFormat } from '@vueuse/core'
 
   const formattedTime = useDateFormat(useNow(), 'HH:mm')
   const formattedDate = useDateFormat(useNow(), 'DD/MM/YYYY')

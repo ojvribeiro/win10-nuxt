@@ -1,28 +1,8 @@
-<template>
-  <span
-    v-if="!props.icon"
-    :class="[
-      'icon h-[1em] w-[1em] [&>svg]:h-[1em] [&>svg]:w-[1em] [&>svg]:fill-current',
-      resolvedClasses,
-    ]"
-    :style="isUrl ? { 'background-image': `url(${iconUrl})` } : {}"
-    v-html="
-      (props.renderAs === 'raw' && props.format !== 'png') ||
-      (props.format === 'svg' && !isRaw) ||
-      (props.format === 'png' && !isUrl)
-        ? iconUrl
-        : ''
-    "
-  />
-
-  <IconifyIcon v-else :icon="props.icon" :class="resolvedClasses" />
-</template>
-
 <script setup lang="ts">
-  import type { IconSet } from './types'
   import { Icon as IconifyIcon } from '@iconify/vue'
-  import type { IconProps } from '@iconify/vue'
   import { twMerge } from 'tailwind-merge'
+  import type { IconProps } from '@iconify/vue'
+  import type { IconSet } from './types'
 
   export interface Props extends Partial<IconProps> {
     name?: IconSet['name']
@@ -93,10 +73,6 @@
       ]()) as string
 
       iconUrl.value = iconTransformedPath
-
-      if (props.icon) {
-        return
-      }
     } catch {
       if (props.name) {
         console.error(`Icon '${props.name}' doesn't exist in 'assets/icons'`)
@@ -110,14 +86,36 @@
 
   const resolvedClasses = computed(() => {
     const defaultClasses = `
+      icon
       inline-block
       align-middle
       text-2xl
+      h-[1em] w-[1em]
+      [&>svg]:h-[1em] [&>svg]:w-[1em]
+      [&>svg]:fill-current
+
     `
 
     return twMerge(defaultClasses, props.class as string)
   })
 </script>
+
+<template>
+  <span
+    v-if="!props.icon"
+    :class="[resolvedClasses]"
+    :style="isUrl ? { 'background-image': `url(${iconUrl})` } : {}"
+    v-html="
+      (props.renderAs === 'raw' && props.format !== 'png') ||
+      (props.format === 'svg' && !isRaw) ||
+      (props.format === 'png' && !isUrl)
+        ? iconUrl
+        : ''
+    "
+  />
+
+  <IconifyIcon v-else :icon="props.icon" :class="resolvedClasses" />
+</template>
 
 <style scoped>
   span.icon {
