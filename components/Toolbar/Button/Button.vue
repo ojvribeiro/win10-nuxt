@@ -21,7 +21,7 @@
     <button
       :class="
         twMerge([
-          'flex h-full w-full cursor-default items-center justify-center text-white hover:bg-white/10',
+          'flex h-full w-[calc(100%_-_1px)] cursor-default items-center justify-center text-white group-hover:bg-white/10',
           props.variant === 'system'
             ? 'active:bg-white/15'
             : 'active:bg-white/5',
