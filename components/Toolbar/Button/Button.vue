@@ -4,6 +4,7 @@
   interface Props {
     variant?: 'app' | 'system'
     wrapperClasses?: string
+    clickableGap?: number
   }
 
   defineOptions({
@@ -13,6 +14,7 @@
   const props = withDefaults(defineProps<Props>(), {
     variant: 'app',
     wrapperClasses: '',
+    clickableGap: 0,
   })
 </script>
 
@@ -21,12 +23,15 @@
     <button
       :class="
         twMerge([
-          'flex h-full w-[calc(100%_-_1px)] cursor-default items-center justify-center text-white group-hover:bg-white/10',
+          'flex h-full cursor-default items-center justify-center text-white group-hover:bg-white/10',
           props.variant === 'system'
             ? 'active:bg-white/15'
             : 'active:bg-white/5',
         ])
       "
+      :style="{
+        width: `calc(100% - ${props.clickableGap}px)`,
+      }"
       v-bind="$attrs"
     >
       <slot />

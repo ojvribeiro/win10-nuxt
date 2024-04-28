@@ -34,11 +34,11 @@
           <ToolbarButtonTaskView />
         </ToolbarAppBar>
 
-        <div class="flex h-full">
-          <ToolbarButton v-for="app in apps" :key="app.icon">
+        <ToolbarAppBar>
+          <ToolbarButton v-for="app in apps" :key="app.icon" :clickable-gap="1">
             <Icon :name="app.icon" />
           </ToolbarButton>
-        </div>
+        </ToolbarAppBar>
       </div>
 
       <div class="flex items-start">
