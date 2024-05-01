@@ -83,12 +83,12 @@
 
   .start-menu-enter-active .section,
   .start-menu-leave-active .section {
-    transition: all 500ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
+    transition: all 450ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
   }
 
   .start-menu-enter-from .section,
   .start-menu-leave-to .section {
-    transform: translateY(360px) scaleY(1.8);
+    transform: translateY(460px) scaleY(1.8);
     opacity: 0;
   }
 </style>
