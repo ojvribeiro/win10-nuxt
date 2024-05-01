@@ -26,12 +26,12 @@
 <style scoped>
   .start-menu-enter-active {
     transition:
-      transform 800ms cubic-bezier(0.01, 0.955, 0.11, 1),
-      opacity 200ms cubic-bezier(0.295, 0.485, 0, 0.975);
+      transform 900ms cubic-bezier(0.08, 0.915, 0.005, 0.985),
+      opacity 250ms cubic-bezier(0.295, 0.485, 0, 0.975);
   }
 
   .start-menu-leave-active {
-    transition: all 100ms cubic-bezier(0.295, 0.485, 0, 0.975);
+    transition: 150ms cubic-bezier(0.295, 0.485, 0, 0.975);
   }
 
   .start-menu-enter-from,
