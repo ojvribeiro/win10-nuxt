@@ -15,7 +15,7 @@
     <Transition name="start-menu">
       <div
         v-if="toolbar.startMenu.isOpen"
-        class="absolute bottom-0 left-0 h-[80%] w-[500px] bg-zinc-900/90 text-white backdrop-blur-md"
+        class="absolute bottom-0 left-0 h-[80%] w-[650px] bg-zinc-900/90 text-white backdrop-blur-md"
       >
         menu iniciar
       </div>
