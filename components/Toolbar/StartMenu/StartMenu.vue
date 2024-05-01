@@ -17,7 +17,34 @@
         v-if="toolbar.startMenu.isOpen"
         class="absolute bottom-0 left-0 h-[80%] w-[650px] bg-zinc-900/90 text-white backdrop-blur-md"
       >
-        menu iniciar
+        <div class="flex h-full w-full justify-start gap-3">
+          <div class="h-full w-12">
+            <div class="flex h-full w-full flex-col justify-between">
+              <div>
+                <ToolbarButton variant="system" class="text-md h-12 w-full">
+                  <Icon icon="fluent-mdl2:global-nav-button" />
+                </ToolbarButton>
+              </div>
+
+              <div class="flex w-full flex-col">
+                <div>
+                  <ToolbarButton variant="system" class="text-md h-12 w-full">
+                    <Icon icon="fluent-mdl2:settings" />
+                  </ToolbarButton>
+                </div>
+
+                <div>
+                  <ToolbarButton
+                    variant="system"
+                    class="text-md h-12 w-full text-lg"
+                  >
+                    <Icon icon="fluent-mdl2:power-button" />
+                  </ToolbarButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Transition>
   </div>
