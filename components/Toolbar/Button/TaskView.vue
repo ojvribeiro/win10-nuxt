@@ -12,6 +12,7 @@
 <template>
   <ToolbarButton
     variant="system"
+    class="text-md"
     @mouseover="changeTaskViewState('hover')"
     @mouseout="changeTaskViewState('idle')"
   >
