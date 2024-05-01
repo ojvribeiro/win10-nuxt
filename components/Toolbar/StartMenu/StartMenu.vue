@@ -20,7 +20,7 @@
         <div class="flex h-full w-full justify-start gap-3">
           <div class="h-full w-12">
             <div class="flex h-full w-full flex-col justify-between">
-              <div>
+              <div class="pt-1">
                 <ToolbarButton variant="system" class="text-md h-12 w-full">
                   <Icon icon="fluent-mdl2:global-nav-button" />
                 </ToolbarButton>
