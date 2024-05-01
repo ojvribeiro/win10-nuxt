@@ -83,7 +83,7 @@
 
   .start-menu-enter-active .section,
   .start-menu-leave-active .section {
-    transition: all 450ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
+    transition: all 350ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
   }
 
   .start-menu-enter-from .section,
