@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
   .start-menu-enter-active {
     transition:
       transform 800ms cubic-bezier(0.01, 0.955, 0.11, 1),

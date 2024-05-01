@@ -28,14 +28,12 @@
   </ToolbarButton>
 </template>
 
-<style scoped lang="scss">
-  .item {
-    &-idle {
-      transform: translateX(50%);
-    }
+<style scoped>
+  .item-idle {
+    transform: translateX(50%);
+  }
 
-    &-hover {
-      transform: translateX(-50%);
-    }
+  .item-hover {
+    transform: translateX(-50%);
   }
 </style>

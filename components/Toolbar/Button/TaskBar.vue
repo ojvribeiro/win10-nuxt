@@ -8,12 +8,12 @@
   </button>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
   button {
     transition: 0.12s background-color ease-out;
+  }
 
-    &:hover {
-      transition: 0.02s background-color ease-in;
-    }
+  button:hover {
+    transition: 0.02s background-color ease-in;
   }
 </style>
