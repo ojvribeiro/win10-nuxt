@@ -4,7 +4,7 @@
 
 <template>
   <ToolbarButton
-    class="hover:text-green-300 active:text-green-500"
+    class="hover:text-[#68e3a8] active:text-[#00cc6a]"
     :class="[
       toolbar.startMenu.isOpen ? 'bg-white/20 group-hover:bg-white/20' : '',
     ]"
