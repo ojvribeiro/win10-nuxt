@@ -89,7 +89,6 @@
       icon
       inline-block
       align-middle
-      text-2xl
       h-[1em] w-[1em]
       [&>svg]:h-[1em] [&>svg]:w-[1em]
       [&>svg]:fill-current

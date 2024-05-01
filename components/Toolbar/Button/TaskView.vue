@@ -19,7 +19,7 @@
       v-for="state in taskViewStates"
       :key="state"
       :name="`task-view/${state}`"
-      class="text-md [shape-rendering:crispEdges]"
+      class="[shape-rendering:crispEdges]"
       :class="[
         taskViewState === state ? 'opacity-100' : 'opacity-0',
         `item-${state}`,

@@ -5,6 +5,7 @@
     variant?: 'app' | 'system'
     wrapperClasses?: string
     clickableGap?: number
+    class?: string | string[]
   }
 
   defineOptions({
@@ -28,10 +29,11 @@
     <button
       :class="
         twMerge([
-          'flex h-full cursor-default items-center justify-center text-white group-hover:bg-white/10',
+          'flex h-full cursor-default items-center justify-center text-2xl text-white group-hover:bg-white/10',
           props.variant === 'system'
             ? 'group-active:bg-white/15'
             : 'group-active:bg-white/5',
+          props.class,
         ])
       "
       :style="{
