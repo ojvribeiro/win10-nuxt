@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@pinia/nuxt',
     '@vueuse/nuxt',
+    '@nuxt/image',
   ],
 
   tailwindcss: {
