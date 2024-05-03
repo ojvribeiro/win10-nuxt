@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const wallpaperModel = defineModel<string>({
-    default: '/img/wallpaper.jpg',
+    default: '/img/wallpaper/tetris.png',
   })
 </script>
 
