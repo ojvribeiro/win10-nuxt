@@ -67,7 +67,7 @@
 <style scoped>
   .start-menu-enter-active {
     transition:
-      transform 900ms cubic-bezier(0.08, 0.915, 0.005, 0.985),
+      transform 700ms cubic-bezier(0.08, 0.915, 0.005, 0.985),
       opacity 250ms cubic-bezier(0.295, 0.485, 0, 0.975);
   }
 
@@ -83,7 +83,7 @@
 
   .start-menu-enter-active .section,
   .start-menu-leave-active .section {
-    transition: all 350ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
+    transition: all 500ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
   }
 
   .start-menu-enter-from .section,
