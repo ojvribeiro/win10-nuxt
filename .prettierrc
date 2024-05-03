@@ -8,6 +8,5 @@
   "arrowParens": "avoid",
   "bracketSameLine": false,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "quoteProps": "consistent",
-  "endOfLine": "crlf"
+  "quoteProps": "consistent"
 }
