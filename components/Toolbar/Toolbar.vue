@@ -26,7 +26,7 @@
 
 <template>
   <div
-    class="fixed bottom-0 left-0 h-11 w-screen bg-zinc-900/95 font-light backdrop-blur-md"
+    class="fixed bottom-0 left-0 h-11 w-screen bg-[#212121]/95 font-light backdrop-blur-md"
   >
     <div class="flex h-full justify-between">
       <div class="flex h-full items-start gap-[3px]">

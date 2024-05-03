@@ -15,7 +15,7 @@
     <Transition name="start-menu">
       <div
         v-if="toolbar.startMenu.isOpen"
-        class="absolute bottom-0 left-0 h-[80%] w-[650px] bg-zinc-900/90 text-white backdrop-blur-md"
+        class="absolute bottom-0 left-0 h-[80%] w-[650px] bg-[#272626]/90 text-white shadow-[0px_4px_20px_-8px_#000] backdrop-blur-lg"
       >
         <div class="flex h-full w-full justify-start gap-3">
           <div class="h-full w-12">
