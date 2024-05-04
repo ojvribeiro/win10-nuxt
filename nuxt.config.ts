@@ -3,11 +3,11 @@ export default defineNuxtConfig({
   ssr: false,
 
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxt/image',
     'radix-vue/nuxt',
   ],
 
