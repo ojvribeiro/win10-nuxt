@@ -46,16 +46,18 @@
           </div>
 
           <div class="h-full w-[270px]">
-            <div class="section block h-full overflow-y-scroll pt-2">
-              <ul class="">
-                <li v-for="i in 50" :key="i">
-                  <button
-                    class="h-9 w-full cursor-default px-3 text-start hover:bg-white/10"
-                  >
-                    Item #{{ i }}
-                  </button>
-                </li>
-              </ul>
+            <div class="section h-full pt-2">
+              <ScrollAreaVertical>
+                <ul>
+                  <li v-for="i in 50" :key="i">
+                    <button
+                      class="h-9 w-full cursor-default px-3 text-start hover:bg-white/10"
+                    >
+                      Item #{{ i }}
+                    </button>
+                  </li>
+                </ul>
+              </ScrollAreaVertical>
             </div>
           </div>
         </div>
