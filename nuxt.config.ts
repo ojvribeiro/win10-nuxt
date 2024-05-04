@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxt/image',
+    'radix-vue/nuxt',
   ],
 
   tailwindcss: {

@@ -17,6 +17,7 @@
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@pinia/nuxt": "^0.5.1",
     "@vueuse/nuxt": "^10.9.0",
+    "radix-vue": "^1.7.3",
     "sass": "^1.76.0",
     "tailwind-merge": "^2.3.0"
   },
