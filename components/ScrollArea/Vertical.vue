@@ -3,7 +3,7 @@
     class="h-full overflow-hidden transition-opacity duration-300"
     :scroll-hide-delay="0"
   >
-    <ScrollAreaViewport class="h-full transition-opacity duration-300">
+    <ScrollAreaViewport class="mr-4 h-full transition-opacity duration-300">
       <slot />
     </ScrollAreaViewport>
 
