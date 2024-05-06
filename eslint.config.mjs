@@ -5,14 +5,16 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 export default withNuxt(
   antfu({
     rules: {
-      'vue/html-indent': 'off',
-      'style/quote-props': 'off',
-      'style/indent': 'off',
-      'style/brace-style': 'off',
       'curly': 'off',
-      'vue/operator-linebreak': 'off',
+      'prettier/prettier': ['error'],
       'style/arrow-parens': 'off',
-      'vue/singleline-html-element-content-newline': 'off',
+      'style/brace-style': 'off',
+      'style/quote-props': 'off',
+      'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+      'vue/html-indent': ['error', 4],
+      'vue/operator-linebreak': 'off',
+      'vue/require-default-prop': 0,
+      'vue/singleline-html-element-content-newline': 0,
     },
   }),
 )
