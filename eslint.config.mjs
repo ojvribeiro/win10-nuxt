@@ -4,7 +4,6 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
   antfu({
-    // ...@antfu/eslint-config options
     rules: {
       'vue/html-indent': 'off',
       'style/quote-props': 'off',
@@ -13,7 +12,7 @@ export default withNuxt(
       'curly': 'off',
       'vue/operator-linebreak': 'off',
       'style/arrow-parens': 'off',
+      'vue/singleline-html-element-content-newline': 'off',
     },
   }),
-  // ...your other rules
 )
