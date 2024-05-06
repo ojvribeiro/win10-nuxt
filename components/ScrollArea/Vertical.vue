@@ -10,10 +10,14 @@
     <Transition name="fade">
       <ScrollAreaScrollbar
         orientation="vertical"
-        class="group w-3 bg-transparent transition-colors delay-500 duration-300 hover:bg-[#3a3939]"
+        class="group relative w-3 bg-transparent"
       >
+        <div
+          class="absolute h-full w-3 transition-colors delay-500 duration-300 group-hover:bg-white/10"
+        />
+
         <ScrollAreaThumb
-          class="origin-right bg-[#888888] transition-[colors,_scale] delay-500 [scale:0.2_1] hover:!bg-[#888888] active:!bg-[#b0b0b0] group-hover:bg-[#616161] group-hover:transition-[colors,_scale] group-hover:delay-500 group-hover:duration-300 group-hover:[scale:1_1]"
+          class="origin-right bg-white/40 transition-[scale] delay-500 [scale:0.2_1] hover:!bg-white/40 active:!bg-white/60 group-hover:bg-white/20 group-hover:[scale:1_1]"
         />
       </ScrollAreaScrollbar>
     </Transition>
@@ -24,7 +28,7 @@
 <style scoped>
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity 0.1s;
+    transition: opacity 0.2s;
   }
 
   .fade-enter-from,
