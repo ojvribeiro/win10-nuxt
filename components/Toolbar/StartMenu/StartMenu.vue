@@ -4,7 +4,7 @@
 
 <template>
   <div
-    class="fixed bottom-11 left-0 h-[calc(100vh_-_44px)] w-screen overflow-hidden"
+    class="fixed bottom-11 left-0 h-[calc(100vh_-_44px)] min-h-[390px] w-screen overflow-hidden"
     :class="[!toolbar.startMenu.isOpen ? 'pointer-events-none' : '']"
   >
     <div
