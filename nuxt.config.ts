@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   ssr: false,
 
+  app: {
+    head: {
+      title: 'Windows 10 in Nuxt',
+    },
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
