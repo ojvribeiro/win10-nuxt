@@ -2,7 +2,7 @@
   import { useDateFormat, useNow } from '@vueuse/core'
   import type { IconSet } from '~/components/Icon/types'
 
-  const toolbar = useToolbar()
+  const toolbar = useToolbarStore()
 
   const formattedTime = useDateFormat(useNow(), 'HH:mm')
   const formattedDate = useDateFormat(useNow(), 'DD/MM/YYYY')

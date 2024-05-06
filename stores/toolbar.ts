@@ -1,4 +1,4 @@
-export const useToolbar = defineStore('toolbar', {
+export const useToolbarStore = defineStore('toolbar', {
   state() {
     return {
       startMenu: {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const toolbar = useToolbar()
+  const toolbar = useToolbarStore()
 </script>
 
 <template>
