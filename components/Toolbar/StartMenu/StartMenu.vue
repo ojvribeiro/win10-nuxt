@@ -8,7 +8,7 @@
     :class="[!toolbar.startMenu.isOpen ? 'pointer-events-none' : '']"
   >
     <div
-      class="absolute left-0 top-0 h-full w-full"
+      class="absolute top-0 left-0 h-full w-full"
       @mousedown="toolbar.startMenu.isOpen = false"
     />
 
