@@ -21,7 +21,7 @@
 
 <template>
   <div
-    class="absolute left-0 top-0 z-[-1] h-screen w-screen bg-black"
+    class="absolute top-0 left-0 z-[-1] h-screen w-screen bg-black"
     @click="toggleWallpaper"
   >
     <NuxtImg

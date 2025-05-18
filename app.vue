@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed left-0 top-0 h-screen w-screen select-none overflow-hidden">
+  <div class="fixed top-0 left-0 h-screen w-screen overflow-hidden select-none">
     <DesktopWallpaper />
 
     <ToolbarStartMenu />

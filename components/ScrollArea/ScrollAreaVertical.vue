@@ -17,7 +17,7 @@
         />
 
         <ScrollAreaThumb
-          class="origin-right bg-white/40 transition-[scale] delay-500 [scale:0.2_1] hover:!bg-white/40 active:!bg-white/60 group-hover:bg-white/20 group-hover:[scale:1_1]"
+          class="origin-right [scale:0.2_1] bg-white/40 transition-[scale] delay-500 group-hover:[scale:1_1] group-hover:bg-white/20 hover:!bg-white/40 active:!bg-white/60"
         />
       </ScrollAreaScrollbar>
     </Transition>
