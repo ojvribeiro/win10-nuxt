@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "antfu.goto-alias",
+    "antfu.iconify",
+    "esbenp.prettier-vscode"
+  ],
+  "unwantedRecommendations": ["octref.vetur"]
+}
+
