@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
@@ -11,21 +13,23 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     'radix-vue/nuxt',
   ],
 
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-    viewer: false,
-  },
+  css: ['~/assets/css/tailwind.css'],
 
   eslint: {
     config: {
       standalone: false,
     },
+  },
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
 
   devtools: { enabled: true },
