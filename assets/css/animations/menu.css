@@ -14,13 +14,24 @@
   transform: translateY(80px);
 }
 
-.menu-enter-active .section,
-.menu-leave-active .section {
+.menu-enter-active :deep(.menu-section),
+.menu-leave-active :deep(.menu-section) {
   transition: all 400ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
 }
 
-.menu-enter-from .section,
-.menu-leave-to .section {
+.menu-enter-from :deep(.menu-section),
+.menu-leave-to :deep(.menu-section) {
+  transform: translateY(400px) scaleY(1.5);
+  opacity: 0;
+}
+
+.menu-enter-active :deep(.menu-section),
+.menu-leave-active :deep(.menu-section) {
+  transition: all 400ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
+}
+
+.menu-enter-from :deep(.menu-section),
+.menu-leave-to :deep(.menu-section) {
   transform: translateY(400px) scaleY(1.5);
   opacity: 0;
 }
