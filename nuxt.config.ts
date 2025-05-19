@@ -28,6 +28,10 @@ export default defineNuxtConfig({
     },
   },
 
+  radix: {
+    prefix: 'Radix',
+  },
+
   vite: {
     plugins: [tailwindcss()],
   },

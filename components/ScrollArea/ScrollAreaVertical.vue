@@ -1,14 +1,16 @@
 <template>
-  <ScrollAreaRoot
+  <RadixScrollAreaRoot
     class="h-full overflow-hidden transition-opacity duration-300"
     :scroll-hide-delay="0"
   >
-    <ScrollAreaViewport class="mr-3 h-full transition-opacity duration-300">
+    <RadixScrollAreaViewport
+      class="mr-3 h-full transition-opacity duration-300"
+    >
       <slot />
-    </ScrollAreaViewport>
+    </RadixScrollAreaViewport>
 
     <Transition name="fade">
-      <ScrollAreaScrollbar
+      <RadixScrollAreaScrollbar
         orientation="vertical"
         class="group relative w-3 bg-transparent"
       >
@@ -16,13 +18,14 @@
           class="absolute h-full w-3 transition-colors delay-500 duration-300 group-hover:bg-white/10"
         />
 
-        <ScrollAreaThumb
+        <RadixScrollAreaThumb
           class="origin-right [scale:0.2_1] bg-white/40 transition-[scale] delay-500 group-hover:[scale:1_1] group-hover:bg-white/20 hover:!bg-white/40 active:!bg-white/60"
         />
-      </ScrollAreaScrollbar>
+      </RadixScrollAreaScrollbar>
     </Transition>
-    <ScrollAreaCorner />
-  </ScrollAreaRoot>
+
+    <RadixScrollAreaCorner />
+  </RadixScrollAreaRoot>
 </template>
 
 <style scoped>
