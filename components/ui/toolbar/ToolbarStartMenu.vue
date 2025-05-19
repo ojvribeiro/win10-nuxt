@@ -62,10 +62,10 @@
             <ScrollAreaVertical class="pt-4">
               <div class="flex flex-col gap-5 pr-1">
                 <div v-for="_ in 3" class="flex flex-col gap-1">
-                  <div class="flex h-7 items-center justify-between">
+                  <div class="group flex h-7 items-center justify-between">
                     <label class="text-sm">Section</label>
 
-                    <div>
+                    <div class="opacity-0 group-hover:opacity-100">
                       <Icon
                         icon="fluent:re-order-20-regular"
                         class="text-2xl"
