@@ -1,1 +1,6 @@
 @import 'tailwindcss';
+
+@theme {
+  --easing-menu-translate: cubic-bezier(0.08, 0.915, 0.005, 0.985);
+  --easing-menu-opacity: cubic-bezier(0.295, 0.485, 0, 0.975);
+}

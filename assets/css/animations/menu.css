@@ -1,11 +1,11 @@
 .menu-enter-active {
   transition:
-    transform 700ms cubic-bezier(0.08, 0.915, 0.005, 0.985),
-    opacity 250ms cubic-bezier(0.295, 0.485, 0, 0.975);
+    transform 700ms var(--easing-menu-translate),
+    opacity 250ms var(--easing-menu-opacity);
 }
 
 .menu-leave-active {
-  transition: 150ms cubic-bezier(0.295, 0.485, 0, 0.975);
+  transition: 150ms var(--easing-menu-opacity);
 }
 
 .menu-enter-from,
@@ -16,7 +16,7 @@
 
 .menu-enter-active :deep(.menu-section),
 .menu-leave-active :deep(.menu-section) {
-  transition: all 400ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
+  transition: all 400ms var(--easing-menu-translate);
 }
 
 .menu-enter-from :deep(.menu-section),
@@ -27,7 +27,7 @@
 
 .menu-enter-active :deep(.menu-section),
 .menu-leave-active :deep(.menu-section) {
-  transition: all 400ms cubic-bezier(0.08, 0.915, 0.005, 0.985);
+  transition: all 400ms var(--easing-menu-translate);
 }
 
 .menu-enter-from :deep(.menu-section),
