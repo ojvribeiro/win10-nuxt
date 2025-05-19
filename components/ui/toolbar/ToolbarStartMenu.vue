@@ -56,6 +56,34 @@
             </ScrollAreaVertical>
           </MenuSection>
         </div>
+
+        <div>
+          <MenuSection :offset="200" class="h-full">
+            <ScrollAreaVertical class="pt-4">
+              <div class="flex flex-col gap-5 pr-1">
+                <div v-for="_ in 3" class="flex flex-col gap-1">
+                  <div class="flex h-7 items-center justify-between">
+                    <label class="text-sm">Section</label>
+
+                    <div>
+                      <Icon
+                        icon="fluent:re-order-20-regular"
+                        class="text-2xl"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-3 gap-1">
+                    <div
+                      v-for="_ in 9"
+                      class="aspect-square w-[100px] border-white/40 bg-white/10 hover:border-2"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </ScrollAreaVertical>
+          </MenuSection>
+        </div>
       </div>
     </Menu>
   </div>
