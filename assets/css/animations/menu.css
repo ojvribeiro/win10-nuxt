@@ -21,7 +21,7 @@
 
 .menu-enter-from :deep(.menu-section),
 .menu-leave-to :deep(.menu-section) {
-  transform: translateY(400px) scaleY(1.5);
+  transform: var(--offset) scaleY(1.5);
   opacity: 0;
 }
 
@@ -32,6 +32,6 @@
 
 .menu-enter-from :deep(.menu-section),
 .menu-leave-to :deep(.menu-section) {
-  transform: translateY(400px) scaleY(1.5);
+  transform: var(--offset) scaleY(1.5);
   opacity: 0;
 }

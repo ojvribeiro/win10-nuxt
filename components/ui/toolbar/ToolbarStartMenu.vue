@@ -42,7 +42,7 @@
         </div>
 
         <div class="h-full w-[270px]">
-          <div class="menu-section h-full pt-2">
+          <MenuSection class="h-full pt-2">
             <ScrollAreaVertical>
               <ul>
                 <li v-for="i in 50" :key="i">
@@ -54,7 +54,7 @@
                 </li>
               </ul>
             </ScrollAreaVertical>
-          </div>
+          </MenuSection>
         </div>
       </div>
     </Menu>
