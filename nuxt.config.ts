@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     'radix-vue/nuxt',
+    '@nuxt/fonts',
   ],
 
   css: ['~/assets/css/tailwind.css'],
@@ -26,6 +27,10 @@ export default defineNuxtConfig({
     config: {
       standalone: false,
     },
+  },
+
+  fonts: {
+    provider: 'local',
   },
 
   radix: {

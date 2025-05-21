@@ -7,3 +7,10 @@
     <Toolbar />
   </div>
 </template>
+
+<style>
+  html,
+  body {
+    font-family: 'Segoe UI Light';
+  }
+</style>
