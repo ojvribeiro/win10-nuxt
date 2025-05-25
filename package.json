@@ -18,7 +18,7 @@
     "@pinia/nuxt": "^0.11.0",
     "@tailwindcss/vite": "^4.1.7",
     "@vueuse/nuxt": "^13.2.0",
-    "radix-vue": "^1.7.3",
+    "reka-ui": "^2.2.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^4.1.7"
   },

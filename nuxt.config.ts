@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    'radix-vue/nuxt',
+    'reka-ui/nuxt',
     '@nuxt/fonts',
   ],
 
@@ -33,8 +33,8 @@ export default defineNuxtConfig({
     provider: 'local',
   },
 
-  radix: {
-    prefix: 'Radix',
+  reka: {
+    prefix: 'Reka',
   },
 
   vite: {
