@@ -72,7 +72,7 @@
         </div>
 
         <div class="h-full w-[270px]">
-          <MenuSection class="h-full pt-2">
+          <MenuSection :offset="200" class="h-full pt-2">
             <ScrollAreaVertical>
               <ul class="pb-[54px]">
                 <li v-for="i in 50" :key="i">
