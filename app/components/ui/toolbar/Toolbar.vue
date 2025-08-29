@@ -1,27 +1,27 @@
 <script setup lang="ts">
-  import { useDateFormat, useNow } from '@vueuse/core'
-  import type { IconSet } from '~/components/Icon/types'
+import type { IconSet } from '~/components/Icon/types'
+import { useDateFormat, useNow } from '@vueuse/core'
 
-  const toolbar = useToolbarStore()
+const toolbar = useToolbarStore()
 
-  const formattedTime = useDateFormat(useNow(), 'HH:mm')
-  const formattedDate = useDateFormat(useNow(), 'DD/MM/YYYY')
+const formattedTime = useDateFormat(useNow(), 'HH:mm')
+const formattedDate = useDateFormat(useNow(), 'DD/MM/YYYY')
 
-  const apps = ref<
-    {
-      name: string
-      icon: IconSet['name']
-    }[]
-  >([
-    {
-      name: 'Google Chrome',
-      icon: 'brands/chrome',
-    },
-    {
-      name: 'Visual Studio Code',
-      icon: 'brands/vscode',
-    },
-  ])
+const apps = ref<
+  {
+    name: string
+    icon: IconSet['name']
+  }[]
+>([
+  {
+    name: 'Google Chrome',
+    icon: 'brands/chrome',
+  },
+  {
+    name: 'Visual Studio Code',
+    icon: 'brands/vscode',
+  },
+])
 </script>
 
 <template>

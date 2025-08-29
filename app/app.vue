@@ -9,8 +9,8 @@
 </template>
 
 <style>
-  html,
-  body {
-    font-family: 'Segoe UI Light';
-  }
+html,
+body {
+  font-family: 'Segoe UI Light';
+}
 </style>

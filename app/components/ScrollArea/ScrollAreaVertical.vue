@@ -1,7 +1,7 @@
 <template>
   <RekaScrollAreaRoot
-    class="h-full overflow-hidden transition-opacity duration-300"
     :scroll-hide-delay="0"
+    class="h-full overflow-hidden transition-opacity duration-300"
   >
     <RekaScrollAreaViewport class="mr-3 h-full transition-opacity duration-300">
       <slot />
@@ -27,13 +27,13 @@
 </template>
 
 <style scoped>
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.2s;
-  }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
 
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-  }
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

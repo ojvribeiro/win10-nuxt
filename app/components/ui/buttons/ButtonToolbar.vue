@@ -1,22 +1,22 @@
 <script setup lang="ts">
-  import { twMerge } from 'tailwind-merge'
+import { twMerge } from 'tailwind-merge'
 
-  interface Props {
-    variant?: 'app' | 'system'
-    wrapperClasses?: string
-    clickableGap?: number
-    class?: string | string[]
-  }
+interface Props {
+  variant?: 'app' | 'system'
+  wrapperClasses?: string
+  clickableGap?: number
+  class?: string | string[]
+}
 
-  defineOptions({
-    inheritAttrs: false,
-  })
+defineOptions({
+  inheritAttrs: false,
+})
 
-  const props = withDefaults(defineProps<Props>(), {
-    variant: 'app',
-    wrapperClasses: '',
-    clickableGap: 0,
-  })
+const props = withDefaults(defineProps<Props>(), {
+  variant: 'app',
+  wrapperClasses: '',
+  clickableGap: 0,
+})
 </script>
 
 <template>
@@ -47,11 +47,11 @@
 </template>
 
 <style scoped>
-  button {
-    transition: 0.15s background-color ease-out;
-  }
+button {
+  transition: 0.15s background-color ease-out;
+}
 
-  button:hover {
-    transition: 0.005s background-color ease-in;
-  }
+button:hover {
+  transition: 0.005s background-color ease-in;
+}
 </style>

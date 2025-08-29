@@ -9,11 +9,11 @@
 </template>
 
 <style scoped>
-  button {
-    transition: 0.12s background-color ease-out;
-  }
+button {
+  transition: 0.12s background-color ease-out;
+}
 
-  button:hover {
-    transition: 0.02s background-color ease-in;
-  }
+button:hover {
+  transition: 0.02s background-color ease-in;
+}
 </style>

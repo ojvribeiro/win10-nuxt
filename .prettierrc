@@ -3,10 +3,8 @@
   "useTabs": false,
   "singleQuote": true,
   "semi": false,
-  "trailingComma": "all",
-  "vueIndentScriptAndStyle": true,
-  "arrowParens": "avoid",
-  "bracketSameLine": false,
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "quoteProps": "consistent"
+  "trailingComma": "es5",
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

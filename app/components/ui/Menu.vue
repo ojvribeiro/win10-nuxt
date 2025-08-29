@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const isOpen = defineModel<boolean>()
+</script>
+
 <template>
   <Transition name="menu">
     <div
@@ -9,10 +13,6 @@
   </Transition>
 </template>
 
-<script setup lang="ts">
-  const isOpen = defineModel<boolean>()
-</script>
-
 <style scoped>
-  @import '~/assets/css/animations/menu.css';
+@import '~/assets/css/animations/menu.css';
 </style>

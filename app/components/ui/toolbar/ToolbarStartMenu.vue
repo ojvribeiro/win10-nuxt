@@ -1,41 +1,47 @@
 <script setup lang="ts">
-  const toolbar = useToolbarStore()
+const toolbar = useToolbarStore()
 
-  const tiles = [
-    {
-      name: 'Browsers',
-      items: [
-        {
-          name: 'Google Chrome',
-          icon: 'logos:chrome',
-        },
-        {
-          name: 'Firefox',
-          icon: 'logos:firefox',
-        },
-        {
-          name: 'Edge',
-          icon: 'logos:microsoft-edge',
-        },
-      ],
-    },
+const tiles = [
+  {
+    slug: 'browsers',
+    name: 'Browsers',
+    items: [
+      {
+        slug: 'google-chrome',
+        name: 'Google Chrome',
+        icon: 'logos:chrome',
+      },
+      {
+        slug: 'firefox',
+        name: 'Firefox',
+        icon: 'logos:firefox',
+      },
+      {
+        slug: 'microsoft-edge',
+        name: 'Edge',
+        icon: 'logos:microsoft-edge',
+      },
+    ],
+  },
 
-    {
-      name: 'Utils',
-      items: [
-        {
-          name: 'Calculator',
-          icon: 'emojione-v1:pocket-calculator',
-        },
-      ],
-    },
-  ]
+  {
+    slug: 'utils',
+    name: 'Utils',
+    items: [
+      {
+        slug: 'calculator',
+        name: 'Calculator',
+        icon: 'emojione-v1:pocket-calculator',
+      },
+    ],
+  },
+]
 </script>
 
 <template>
   <div
-    class="fixed bottom-11 left-0 h-[calc(100vh_-_44px)] min-h-[390px] w-screen overflow-hidden"
     :class="[!toolbar.startMenu.isOpen ? 'pointer-events-none' : '']"
+    class="fixed bottom-11 left-0 h-[calc(100vh_-_44px)] min-h-[390px] w-screen overflow-hidden"
   >
     <div
       class="absolute top-0 left-0 h-full w-full"
@@ -93,7 +99,11 @@
           <MenuSection :offset="200" class="h-full">
             <ScrollAreaVertical class="pt-4">
               <div class="flex flex-col gap-5 pr-1 pb-[54px]">
-                <div v-for="section in tiles" class="flex flex-col gap-1">
+                <div
+                  v-for="section in tiles"
+                  :key="section.slug"
+                  class="flex flex-col gap-1"
+                >
                   <div class="group flex h-7 items-center justify-between">
                     <label class="text-sm">{{ section.name }}</label>
 
@@ -108,6 +118,7 @@
                   <div class="grid grid-cols-3 gap-1">
                     <div
                       v-for="tile in section.items"
+                      :key="tile.slug"
                       class="relative aspect-square w-[100px]"
                     >
                       <label
