@@ -14,23 +14,23 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "@nuxt/image": "^1.11.0",
-    "@pinia/nuxt": "^0.11.2",
-    "@tailwindcss/vite": "^4.1.12",
-    "@vueuse/nuxt": "^13.8.0",
-    "reka-ui": "^2.5.0",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.12"
+    "@nuxt/image": "^2.0.0",
+    "@pinia/nuxt": "^0.11.3",
+    "@tailwindcss/vite": "^4.2.2",
+    "@vueuse/nuxt": "^14.2.1",
+    "reka-ui": "^2.9.5",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.1",
-    "@nuxt/eslint": "^1.9.0",
-    "@nuxt/fonts": "^0.11.4",
-    "eslint": "^9.34.0",
-    "nuxt": "^4.0.3",
-    "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.6.14",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@antfu/eslint-config": "^8.1.1",
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxt/fonts": "^0.14.0",
+    "eslint": "^10.2.0",
+    "nuxt": "^4.4.2",
+    "prettier": "^3.8.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "vue": "3.5.32",
+    "vue-router": "5.0.4"
   }
 }
