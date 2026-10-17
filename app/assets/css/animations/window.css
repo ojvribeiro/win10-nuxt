@@ -1,0 +1,39 @@
+.app-window {
+  transition:
+    transform 250ms var(--easing-window),
+    opacity 200ms var(--easing-window);
+}
+
+.app-window.app-window-geometry {
+  transition:
+    transform 250ms var(--easing-window),
+    opacity 200ms var(--easing-window),
+    left 200ms var(--easing-window),
+    top 200ms var(--easing-window),
+    width 200ms var(--easing-window),
+    height 200ms var(--easing-window);
+}
+
+.app-window.app-window-minimized {
+  opacity: 0;
+  transform: translateY(40%) scale(0.6);
+  pointer-events: none;
+}
+
+.app-window.window-enter-active {
+  transition:
+    transform 250ms var(--easing-window),
+    opacity 150ms linear;
+}
+
+.app-window.window-leave-active {
+  transition:
+    transform 150ms ease-in,
+    opacity 150ms ease-in;
+}
+
+.app-window.window-enter-from,
+.app-window.window-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}

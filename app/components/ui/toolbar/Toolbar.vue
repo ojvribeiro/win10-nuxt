@@ -3,6 +3,7 @@ import type { IconSet } from '~/components/Icon/types'
 import { useDateFormat, useNow } from '@vueuse/core'
 
 const toolbar = useToolbarStore()
+const appStore = useAppStore()
 
 const formattedTime = useDateFormat(useNow(), 'HH:mm')
 const formattedDate = useDateFormat(useNow(), 'DD/MM/YYYY')
@@ -29,7 +30,7 @@ const apps = ref<
     class="fixed bottom-0 left-0 h-11 w-screen bg-[#212121]/95 font-light backdrop-blur-md"
   >
     <div class="flex h-full justify-between">
-      <div class="flex h-full items-start gap-[3px]">
+      <div class="flex h-full items-start gap-0.75">
         <ToolbarAppBar>
           <ButtonToolbarStartMenu
             @click="toolbar.startMenu.isOpen = !toolbar.startMenu.isOpen"
@@ -42,6 +43,12 @@ const apps = ref<
           <ButtonToolbar v-for="app in apps" :key="app.icon" :clickable-gap="1">
             <Icon :name="app.icon" />
           </ButtonToolbar>
+
+          <ButtonToolbarApp
+            v-for="appWindow in appStore.windows"
+            :key="appWindow.appId"
+            :app-id="appWindow.appId"
+          />
         </ToolbarAppBar>
       </div>
 
@@ -83,7 +90,7 @@ const apps = ref<
           <Icon icon="fluent-mdl2:action-center" class="text-lg" />
         </ButtonToolbarTaskbar>
 
-        <ButtonToolbarTaskbar class="ml-2 w-[5px] border-l border-white/30">
+        <ButtonToolbarTaskbar class="ml-2 w-1.25 border-l border-white/30">
           <span>&nbsp;</span>
         </ButtonToolbarTaskbar>
       </ToolbarTaskBar>

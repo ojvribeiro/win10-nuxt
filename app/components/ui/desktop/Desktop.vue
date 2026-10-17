@@ -1,9 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const appStore = useAppStore()
+</script>
 
 <template>
-  <div>
-    <DesktopWallpaper />
+  <div class="isolate">
+    <DesktopWallpaper @mousedown="appStore.blur()" />
 
-    <Window> dawdwa </Window>
+    <TransitionGroup name="window">
+      <Window
+        v-for="appWindow in appStore.windows"
+        :key="appWindow.appId"
+        :app-id="appWindow.appId"
+      >
+        <component :is="appDefinitions[appWindow.appId].component" />
+      </Window>
+    </TransitionGroup>
   </div>
 </template>

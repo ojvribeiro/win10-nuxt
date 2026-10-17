@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const toolbar = useToolbarStore()
+const appStore = useAppStore()
+
+function openSettings() {
+  toolbar.startMenu.isOpen = false
+
+  appStore.open('settings')
+}
 
 const tiles = [
   {
@@ -41,7 +48,7 @@ const tiles = [
 <template>
   <div
     :class="[!toolbar.startMenu.isOpen ? 'pointer-events-none' : '']"
-    class="fixed bottom-11 left-0 h-[calc(100vh_-_44px)] min-h-[390px] w-screen overflow-hidden"
+    class="fixed bottom-11 left-0 h-[calc(100vh-44px)] min-h-97.5 w-screen overflow-hidden"
   >
     <div
       class="absolute top-0 left-0 h-full w-full"
@@ -60,7 +67,11 @@ const tiles = [
 
             <div class="flex w-full flex-col">
               <div>
-                <ButtonToolbar variant="system" class="text-md h-12 w-full">
+                <ButtonToolbar
+                  variant="system"
+                  class="text-md h-12 w-full"
+                  @click="openSettings"
+                >
                   <Icon icon="fluent-mdl2:settings" />
                 </ButtonToolbar>
               </div>
@@ -77,10 +88,10 @@ const tiles = [
           </div>
         </div>
 
-        <div class="h-full w-[270px]">
+        <div class="h-full w-67.5">
           <MenuSection :offset="200" class="h-full pt-2">
             <ScrollAreaVertical>
-              <ul class="pb-[54px]">
+              <ul class="pb-13.5">
                 <li v-for="i in 50" :key="i">
                   <button
                     class="flex h-9 w-full cursor-default items-center gap-1 px-3 text-start text-[13px] hover:bg-white/10"
@@ -98,7 +109,7 @@ const tiles = [
         <div>
           <MenuSection :offset="200" class="h-full">
             <ScrollAreaVertical class="pt-4">
-              <div class="flex flex-col gap-5 pr-1 pb-[54px]">
+              <div class="flex flex-col gap-5 pr-1 pb-13.5">
                 <div
                   v-for="section in tiles"
                   :key="section.slug"
@@ -119,7 +130,7 @@ const tiles = [
                     <div
                       v-for="tile in section.items"
                       :key="tile.slug"
-                      class="relative aspect-square w-[100px]"
+                      class="relative aspect-square w-25"
                     >
                       <label
                         class="absolute right-2 bottom-1 left-2 block text-xs leading-tight"
