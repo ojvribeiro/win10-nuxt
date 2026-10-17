@@ -71,6 +71,15 @@ export default withNuxt(
 
       'style/operator-linebreak': 'off',
 
+      // Prettier always separates single-line type members with semicolons
+      'style/member-delimiter-style': [
+        'warn',
+        {
+          multiline: { delimiter: 'none' },
+          singleline: { delimiter: 'semi', requireLast: false },
+        },
+      ],
+
       'vue/singleline-html-element-content-newline': 'off',
     },
   })
