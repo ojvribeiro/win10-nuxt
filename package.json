@@ -15,22 +15,21 @@
   "dependencies": {
     "@iconify/vue": "^5.0.0",
     "@nuxt/image": "^2.0.0",
-    "@pinia/nuxt": "^0.11.3",
+    "@pinia/nuxt": "^1.0.3",
     "@tailwindcss/vite": "^4.2.2",
-    "@vueuse/nuxt": "^14.2.1",
+    "@vueuse/nuxt": "^15.0.0",
     "reka-ui": "^2.9.5",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^8.1.1",
+    "@antfu/eslint-config": "^9.5.1",
     "@nuxt/eslint": "^1.15.2",
-    "@nuxt/fonts": "^0.14.0",
     "eslint": "^10.2.0",
-    "nuxt": "^4.4.2",
+    "nuxt": "^4.6.2",
     "prettier": "^3.8.2",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "vue": "3.5.32",
-    "vue-router": "5.0.4"
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "vue": "3.5.44",
+    "vue-router": "5.4.0"
   }
 }

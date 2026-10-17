@@ -1,6 +1,21 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Segoe UI Light';
+  src: url('/fonts/segoe-ui-light.ttf') format('truetype');
+  font-display: swap;
+}
+
 @theme {
+  --color-accent: #0078d7;
+
   --easing-menu-translate: cubic-bezier(0.08, 0.915, 0.005, 0.985);
   --easing-menu-opacity: cubic-bezier(0.295, 0.485, 0, 0.975);
+  --easing-window: cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+/* Shades are resolved where they're used, so they follow the accent picked in Settings */
+@theme inline {
+  --color-accent-light: color-mix(in srgb, var(--color-accent) 60%, white);
+  --color-accent-dark: color-mix(in srgb, var(--color-accent) 75%, black);
 }

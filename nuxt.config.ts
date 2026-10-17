@@ -4,6 +4,11 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   ssr: false,
 
+  // Client-only SPA, so the pure Vite server builder replaces Nitro
+  server: {
+    builder: 'vite',
+  },
+
   app: {
     head: {
       title: 'Windows 10 in Nuxt',
@@ -18,7 +23,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     'reka-ui/nuxt',
-    '@nuxt/fonts',
   ],
 
   css: ['~/assets/css/tailwind.css'],
@@ -29,8 +33,9 @@ export default defineNuxtConfig({
     },
   },
 
-  fonts: {
-    provider: 'local',
+  // IPX needs a server runtime, images are served as-is from /public
+  image: {
+    provider: 'none',
   },
 
   reka: {
